@@ -1,0 +1,136 @@
+object Form1: TForm1
+  Left = 179
+  Height = 518
+  Top = 142
+  Width = 915
+  Caption = 'Form1'
+  ClientHeight = 518
+  ClientWidth = 915
+  Color = 10789888
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Panel1: TPanel
+    Left = 336
+    Height = 314
+    Top = 104
+    Width = 259
+    ClientHeight = 314
+    ClientWidth = 259
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 24
+      Height = 15
+      Top = 72
+      Width = 53
+      Caption = 'Username'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      Left = 96
+      Height = 32
+      Top = 64
+      Width = 128
+      AutoSize = False
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 15
+      Top = 128
+      Width = 50
+      Caption = 'Password'
+      ParentColor = False
+    end
+    object Edit2: TEdit
+      Left = 96
+      Height = 32
+      Top = 120
+      Width = 128
+      AutoSize = False
+      TabOrder = 1
+    end
+    object Button1: TButton
+      Left = 104
+      Height = 25
+      Top = 208
+      Width = 75
+      Caption = 'Submit'
+      OnClick = Button1Click
+      TabOrder = 2
+    end
+    object Label4: TLabel
+      Left = 136
+      Height = 15
+      Top = 152
+      Width = 88
+      Caption = 'Forgot password'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 80
+      Height = 15
+      Top = 232
+      Width = 114
+      Caption = 'Create a new account'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Label3: TLabel
+    Left = 432
+    Height = 21
+    Top = 64
+    Width = 65
+    Caption = 'L O G I N'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object MySQL56Connection1: TMySQL56Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'db_financial'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    SkipLibraryVersionCheck = False
+    left = 56
+    top = 16
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL56Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    left = 56
+    top = 88
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MySQL56Connection1
+    left = 56
+    top = 160
+  end
+end
